@@ -1,0 +1,127 @@
+/*!
+ * Main styles
+ *
+ * Theme Name: WP Blank Template
+ * Theme URI: http://WP Blank Template.com
+ * Author: Jonathan Alvarez Gonzalez
+ * Author URI: http://jonalvarezz.com/
+ * Description: Wordpress blank template. A light strcture theme for your new awesome wordpress theme
+ *
+ * @package WordPress
+ * @subpackage WP Blank Template
+ */
+
+@import "nib"
+@import "normalize"
+@import "grid"
+@import "utilities"
+
+vendor-prefixes = webkit o ms moz official
+
+/* 
+ * ------------------------------
+ * General
+ * ------------------------------
+ */
+
+*,
+*:before,
+*:after
+	box-sizing border-box
+
+html
+	font 100%/1.5 Arial
+	font-weight normal
+	text-rendering optimizeLegibility
+	-webkit-font-smoothing antialiased
+
+	@media (min-width: 40em)
+		font-size 112%
+	@media (min-width: 64em)
+		font-size 120%
+
+body
+	background-color #fff
+	color gray
+
+a
+	text-decoration none
+	color red
+	transition all 200ms
+	&:hover
+		color dark-red
+
+input
+textarea
+	width 100%
+	height auto
+	border 2px solid lighten-gray
+	color #898989
+	padding-left .8rem
+	transition border-color 200ms ease-out
+	font-size 0.875rem // 14px
+	&:focus
+		outline none
+		border-color darken(lighten-gray, 10%)
+
+input
+	height 45px
+
+textarea
+	height 10rem
+	padding .8rem
+	resize vertical
+
+label
+	font-weight bold
+
+img
+	max-width 100%
+	height auto
+	vertical-align middle
+
+table
+	width 100%
+	tr
+		border-bottom 1px solid light-gray
+		&:hover
+			background-color #f1f1f1
+
+/* 
+ * ------------------------------
+ * Content
+ * ------------------------------
+ */
+
+.entry-title
+	text-transform uppercase
+
+.entry-content,
+.entry-summary,
+.page-content
+	-webkit-hyphens auto
+	-moz-hyphens    auto
+	-ms-hyphens     auto
+	hyphens         auto
+	word-wrap break-word
+
+.entry-content h1:first-child,
+.entry-content h2:first-child,
+.entry-content h3:first-child,
+.entry-content h4:first-child,
+.entry-content h5:first-child,
+.entry-content h6:first-child,
+.entry-summary h1:first-child,
+.entry-summary h2:first-child,
+.entry-summary h3:first-child,
+.entry-summary h4:first-child,
+.entry-summary h5:first-child,
+.entry-summary h6:first-child,
+.page-content h1:first-child,
+.page-content h2:first-child,
+.page-content h3:first-child,
+.page-content h4:first-child,
+.page-content h5:first-child,
+.page-content h6:first-child
+	margin-top 0
+
