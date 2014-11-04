@@ -26,7 +26,7 @@ light-green = #00FF48
     position absolute
     width 1px
 
-.screen-reader-text
+screen-reader-text()
   clip rect(1px, 1px, 1px, 1px)
   position absolute
   &:focus
@@ -41,6 +41,9 @@ light-green = #00FF48
     text-transform none
     width auto
     z-index 100000
+    
+.screen-reader-text
+	screen-reader-text()
 
 .vertical-align
     width 100%
@@ -100,6 +103,9 @@ button-color(color, fcolor = #fff)
 .inline-list
 	li
 		display inline-block
+
+.pull-left
+	float left
 
 .pull-right
 	float right
