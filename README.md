@@ -19,3 +19,5 @@ The main feature is to provide a general well structured Wordpress template. Nev
 * Grid system (Stylus): The grid system I use. Pretty light and useful.
 
 * Stylus utilities: Some stylus utilities for common CSS classes.
+
+* Gulp for compiling stylus files
