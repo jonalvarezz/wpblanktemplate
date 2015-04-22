@@ -26,7 +26,7 @@
 function wpbt_theme_setup() {
 
 	// This theme styles the visual editor to resemble the theme style - taken from Twenty Fourteen theme.
-	add_editor_style( array( 'css/min/editor-style.css', wpbt_theme_font_url() ) );
+	add_editor_style( array( 'css/editor-style.css', wpbt_theme_font_url() ) );
 
 	// Enable support for Post Thumbnails, and declare two sizes.
 	// add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
@@ -75,7 +75,7 @@ function wpbt_scripts() {
 	wp_enqueue_style( 'wpbt-font', wpbt_theme_font_url(), array(), null );
 
 	// Load our main stylesheet.
-	wp_enqueue_style( 'wpbt-main-style', get_template_directory_uri() . '/css/min/main.min.css', array(), '0.1' );
+	wp_enqueue_style( 'wpbt-main-style', get_template_directory_uri() . '/css/main.min.css', array(), '0.1' );
 
 	wp_enqueue_script( 'wpbt-script', get_template_directory_uri() . '/js/min/app.min.js', array( 'jquery' ), '0.1', true );
 }
@@ -90,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'wpbt_scripts' );
 
 // Load noUISlider
 function load_price_slider() {
-	wp_register_style( 'nouislider_css', get_template_directory_uri() . '/css/min/nouislider.min.css', false, '7.0.1' );
+	wp_register_style( 'nouislider_css', get_template_directory_uri() . '/css/nouislider.min.css', false, '7.0.1' );
 	wp_register_script( 'nouislider_script', get_template_directory_uri() . '/js/min/nouislider.min.js', array('jquery'), '7.0.1', true );
 	
 	wp_enqueue_style( 'nouislider_css' );
@@ -156,7 +156,7 @@ if (!is_admin()) {
 
 // Enqueue custom styles
 function wpbt_login_stylesheet() {
-    wp_enqueue_style( 'wpbt-login', get_template_directory_uri() . '/css/min/login.min.css' );
+    wp_enqueue_style( 'wpbt-login', get_template_directory_uri() . '/css/login.min.css' );
 }
 add_action( 'login_enqueue_scripts', 'wpbt_login_stylesheet' );
 
