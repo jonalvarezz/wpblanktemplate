@@ -1,0 +1,25 @@
+{
+  "name": "WPBlankTemplate",
+  "version": "0.0.1",
+  "description": "This Wordpress theme provides an initial and blank template structure for developing Wordpress themes.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonalvarezz/wpblanktemplate.git"
+  },
+  "keywords": [
+    "wordpress",
+    "template"
+  ],
+  "author": "jonalvarezz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonalvarezz/wpblanktemplate/issues"
+  },
+  "homepage": "https://github.com/jonalvarezz/wpblanktemplate",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.1",
+    "nib": "^1.1.0"
+  }
+}

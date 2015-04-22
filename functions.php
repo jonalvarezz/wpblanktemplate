@@ -75,7 +75,7 @@ function wpbt_scripts() {
 	wp_enqueue_style( 'wpbt-font', wpbt_theme_font_url(), array(), null );
 
 	// Load our main stylesheet.
-	wp_enqueue_style( 'wpbt-main-style', get_template_directory_uri() . '/css/main.min.css', array(), '0.1' );
+	wp_enqueue_style( 'wpbt-main-style', get_template_directory_uri() . '/css/bundle.min.css', array(), '0.1' );
 
 	wp_enqueue_script( 'wpbt-script', get_template_directory_uri() . '/js/min/app.min.js', array( 'jquery' ), '0.1', true );
 }
@@ -85,16 +85,16 @@ add_action( 'wp_enqueue_scripts', 'wpbt_scripts' );
 /**
  * Third party scripts loaders
  *
+ * Call them using the function in the place you want to load
  * @since WP Blank Template 0.8
  */
 
-// Load noUISlider
-function load_price_slider() {
-	wp_register_style( 'nouislider_css', get_template_directory_uri() . '/css/nouislider.min.css', false, '7.0.1' );
-	wp_register_script( 'nouislider_script', get_template_directory_uri() . '/js/min/nouislider.min.js', array('jquery'), '7.0.1', true );
+function load_another_plugin() {
+	wp_register_style( 'plugin_css', get_template_directory_uri() . '/css/plugin.min.css', false, '1.0.0' );
+	wp_register_script( 'plugin_script', get_template_directory_uri() . '/js/min/plugin.min.js', array('jquery'), '1.0.0', true );
 	
-	wp_enqueue_style( 'nouislider_css' );
-	wp_enqueue_script( 'nouislider_script' );
+	wp_enqueue_style( 'plugin_css' );
+	wp_enqueue_script( 'plugin_script' );
 }
 
 
