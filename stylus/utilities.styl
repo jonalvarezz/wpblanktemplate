@@ -1,4 +1,4 @@
-/* 
+/*
  * ------------------------------
  * Mixins'n'Vars
  * ------------------------------
@@ -41,7 +41,7 @@ screen-reader-text()
     text-transform none
     width auto
     z-index 100000
-    
+
 .screen-reader-text
 	screen-reader-text()
 
@@ -67,25 +67,11 @@ button-color(color, fcolor = #fff)
         background-color color
 
 .button
-    padding 0.5rem 1.5rem
+    padding 10px 20px
     border 1px solid light-gray
     background-color transparent
-    &.white
-        button-color(#fff, red)
-    &.red
-        button-color(red)
-        &.inverted
-            background-color red
-            color #fff
-            &:hover
-                background-color darken(red,10%)
-    &.green
-        button-color(green)
-        &.inverted
-            background-color green
-            color #fff
-            &:hover
-                background-color darken(green,10%)
+    text-transform uppercase
+    display inline-block
 
 /*
  * Lists, menus
@@ -145,7 +131,7 @@ button-color(color, fcolor = #fff)
 
 // Bg
 .island
-    padding 1rem 0    
+    padding 1rem 0
 
 /*
  * Responsive Utilities
@@ -156,7 +142,7 @@ button-color(color, fcolor = #fff)
 
 	li
 		display inline-block
-	
+
 	@media (min-width: 50em)
 		display inline-block
 
